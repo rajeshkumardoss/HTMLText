@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <manifest>
-  <control namespace="mhs" constructor="htmltext" version="0.0.1" display-name-key="htmltext" description-key="htmltext description" control-type="standard" >
+  <control namespace="mhs" constructor="htmltext" version="0.0.2" display-name-key="htmltext" description-key="htmltext description" control-type="standard" >
     <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
     If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be false by default.
     Example1:
@@ -18,8 +18,9 @@
       -->
     </external-service-usage>
     <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
-    <property name="HtmlTemplate" display-name-key="HtmlTemplate" description-key="HtmlTemplate" of-type="Multiple" usage="bound" required="true" />
-    <property name="JsonData" display-name-key="JsonData" description-key="JsonData" of-type="Multiple" usage="input" required="true" />
+    <property name="SingleLineofText" display-name-key="SingleLineofText" description-key="SingleLineofText" of-type="SingleLine.Text" usage="bound" required="true" />
+    <property name="HtmlTemplate" display-name-key="HtmlTemplate" description-key="HtmlTemplate" of-type="Multiple" usage="input" required="true" />
+    <property name="JsonData" display-name-key="JsonData" description-key="JsonData" of-type="Multiple" usage="input" required="false" />
     <property name="EventType" display-name-key="EventType" description-key="EventType" of-type="SingleLine.Text" usage="output"  />
     <property name="EventData" display-name-key="EventData" description-key="EventData" of-type="SingleLine.Text" usage="output"  />
     <!--
